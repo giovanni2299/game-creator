@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Weapon;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+    $weapons = Weapon::all();
+    return view('welcome', compact('weapons'));
 });
