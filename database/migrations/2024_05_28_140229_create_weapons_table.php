@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('category',50);
             $table->string('weight',10);
             $table->string('cost',12);
-            $table->string('damage_dice',5);
+            $table->string('damage_dice',5)->nullable();
             $table->timestamps();
         });
     }
