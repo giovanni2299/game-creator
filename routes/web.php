@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Weapon;
+use App\Http\Controllers\CharacterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,4 +21,4 @@ Route::get('/', function () {
     return view('welcome', compact('weapons'));
 });
 
-Route::get('/characters', [CharacterController::class, 'index'])->name('character.index');
+Route::get('/characters', [CharacterController::class, 'index'])->name('characters.index');
