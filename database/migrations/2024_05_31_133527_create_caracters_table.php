@@ -15,11 +15,11 @@ return new class extends Migration
             $table->id();
 
             $table->string('name', 200);
-            $table->string('description', 200);
-            $table->string('name', 200);
-            $table->string('name', 200);
-            $table->string('name', 200);
-            $table->string('name', 200);
+            $table->text('description')->nullable();
+            $table->integer('attack');
+            $table->integer('defence');
+            $table->integer('speed');
+            $table->integer('life');
 
             $table->timestamps();
         });
