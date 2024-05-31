@@ -14,7 +14,7 @@
                     </p>
                     <p>
                         Attacco:
-                        {{$character->attak}}
+                        {{$character->attack}}
                     </p>
                     <p>
                         Defence:
@@ -28,6 +28,8 @@
                         Life-Points:
                         {{$character->life}}
                     </p>
+
+                    <a href="{{ route('characters.show', $character) }}"></a>
 
                 </div>
             </div>

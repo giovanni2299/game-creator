@@ -3,12 +3,16 @@
 @section('content')
 
 <section>
-    <div class="container">
+    <div class="container" >
+        <a class="btn btn-primary" href="{{route('characters.create')}}" >
+            New Character
+        </a>
         <div class="row">
             @foreach($characters as $character)
             <div class="col-3">
                 {{$character->name}}
-                <button href="{{route('characters.show', $character)}}">Visualizza Dett</button>
+                <a class="btn btn-primary" href="{{route('characters.show', $character)}}">Visualizza Dett</a>
+                
             </div>
             @endforeach
         </div>

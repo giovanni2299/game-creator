@@ -22,7 +22,7 @@ class CharacterController extends Controller
      */
     public function create()
     {
-        
+        return view('characters.create');
     }
 
     /**
@@ -30,13 +30,13 @@ class CharacterController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'name'=>'required | max:200',
-            'attack'=>'required | min:1',
-            'defence'=>'required | min:1',
-            'speed'=>'required | min:1',
-            'life'=>'required | min:1',
-        ]);
+        // $request->validate([
+        //     'name'=>'required | max:200',
+        //     'attack'=>'required | min:1',
+        //     'defence'=>'required | min:1',
+        //     'speed'=>'required | min:1',
+        //     'life'=>'required | min:1',
+        // ]);
 
         $form_data = $request->all();
 

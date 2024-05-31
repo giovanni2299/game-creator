@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.app')
 
 @section('content')
 
@@ -24,28 +24,38 @@
 
         <div class="mb-3">
           <label for="attack">Attack</label>
-          <input type="number" id="attack" name="attack" min="0" max="99999" value=""/>
+          <input type="number" id="attack" name="attack" min="0" max="99999"/>
         </div>
 
         <div class="mb-3">
           <label for="attack">Defence</label>
-          <input type="number" id="attack" name="attack" min="0" max="99999" value=""/>
+          <input type="number" id="attack" name="attack" min="0" max="99999"/>
         </div>
 
         <div class="mb-3">
           <label for="attack">Speed</label>
-          <input type="number" id="attack" name="attack" min="0" max="99999" value=""/>
+          <input type="number" id="attack" name="attack" min="0" max="99999"/>
         </div>
 
         <div class="mb-3">
           <label for="attack">Life</label>
-          <input type="number" id="attack" name="attack" min="0" max="999" value=""/>
+          <input type="number" id="attack" name="attack" min="0" max="999"/>
         </div>
 
         <button class="btn btn-primary">Add Character</button>
+
       </form>
+
+      @if ($errors->any())
+        <p class="">
+          <ul>
+            @foreach ($errors->all() as $error )
+            <li class="alert alert-danger">{{ $error }}</li>
+            @endforeach
+          </ul>
+        </p>
+      @endif
+
     </div>
   </section>
-  
-
 @endsection
