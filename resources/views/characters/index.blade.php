@@ -8,6 +8,7 @@
             @foreach($characters as $character)
             <div class="col-3">
                 {{$character->name}}
+                <button>Visualizza Dett</button>
             </div>
             @endforeach
         </div>
