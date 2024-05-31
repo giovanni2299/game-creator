@@ -28,18 +28,18 @@
         </div>
 
         <div class="mb-3">
-          <label for="attack">Defence</label>
-          <input type="number" id="attack" name="attack" min="0" max="99999"/>
+          <label for="defence">Defence</label>
+          <input type="number" id="defence" name="defence" min="0" max="99999"/>
         </div>
 
         <div class="mb-3">
-          <label for="attack">Speed</label>
-          <input type="number" id="attack" name="attack" min="0" max="99999"/>
+          <label for="speed">Speed</label>
+          <input type="number" id="speed" name="speed" min="0" max="99999"/>
         </div>
 
         <div class="mb-3">
-          <label for="attack">Life</label>
-          <input type="number" id="attack" name="attack" min="0" max="999"/>
+          <label for="life">Life</label>
+          <input type="number" id="life" name="life" min="0" max="999"/>
         </div>
 
         <button class="btn btn-primary">Add Character</button>
