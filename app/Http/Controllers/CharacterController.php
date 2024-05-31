@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Characters;
+use App\Models\Character;
 use Illuminate\Http\Request;
 
 class CharacterController extends Controller
@@ -34,7 +34,7 @@ class CharacterController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Characters $characters)
+    public function show(Character $character)
     {
         //
     }
@@ -42,7 +42,7 @@ class CharacterController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Characters $characters)
+    public function edit(Character $character)
     {
         //
     }
@@ -50,7 +50,7 @@ class CharacterController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Characters $characters)
+    public function update(Request $request, Character $character)
     {
         //
     }
@@ -58,7 +58,7 @@ class CharacterController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Characters $characters)
+    public function destroy(Character $character)
     {
         //
     }

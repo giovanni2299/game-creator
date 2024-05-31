@@ -19,3 +19,5 @@ Route::get('/', function () {
     $weapons = Weapon::all();
     return view('welcome', compact('weapons'));
 });
+
+Route::get('/characters', [CharacterController::class, 'index'])->name('character.index');
