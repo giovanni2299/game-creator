@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
+    <div class="row justify-content-center p-3">
         <div class="col-3">
             <div class="card">
                 <div class="card-header">
@@ -29,7 +29,24 @@
                         {{$character->life}}
                     </p>
 
-                    <a href="{{ route('characters.show', $character) }}"></a>
+                   
+                        
+                        <div class="d-flex gap-2">
+                            <a class="btn me-2 btn-primary" href="{{ route('characters.edit', $character) }}">edita personaggio  </a>
+
+                            <form action="{{ route('characters.destroy',$character) }}" method="POST">
+                              @method('DELETE')
+                              @csrf
+              
+                              <button class="btn btn-danger" href="">elimina personaggio</button>
+              
+                            </form>
+                          </div>
+                        
+
+                    
+
+
 
                 </div>
             </div>

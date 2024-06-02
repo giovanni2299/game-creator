@@ -12,9 +12,14 @@
 
     </head>
     <body>
-        <h1>Weapons</h1>
+        @extends('layouts.app')
+
+        <h1 class="text-center">Weapons</h1>
             
         <div class="container">
+            <div class="btn btn-primay">
+                <a class="btn btn-primary" href="{{route('characters.index')}}">see character</a>
+            </div>
             <table class="table">
                 <thead>
                     <tr>

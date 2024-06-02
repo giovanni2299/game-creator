@@ -19,7 +19,7 @@ Route::get('/', function () {
 
     $weapons = Weapon::all();
     return view('welcome', compact('weapons'));
-});
+})->name('welcome');
 
 // INDEX
 Route::get('/characters', [CharacterController::class, 'index'])->name('characters.index');
@@ -30,8 +30,8 @@ Route::get('/characters/{character}', [CharacterController::class, 'show'])->nam
 // STORE
 Route::post('/characters', [CharacterController::class, 'store'])->name('characters.store');
 // EDIT
-// Route::get('/characters/{character}/edit', [CharacterController::class, 'edit'])->name('characters.edit');
+Route::get('/characters/{character}/edit', [CharacterController::class, 'edit'])->name('characters.edit');
 // UPDATE
-// Route::put('/characters/{character}', [CharacterController::class, 'update'])->name('characters.update');
+Route::put('/characters/{character}', [CharacterController::class, 'update'])->name('characters.update');
 // DESTROY
-// Route::delete('/characters/{character}', [CharacterController::class, 'destroy'])->name('characters.destroy');
+Route::delete('/characters/{character}', [CharacterController::class, 'destroy'])->name('characters.destroy');

@@ -23,7 +23,9 @@
         </div>
 
         <div class="mb-3">
-          <label for="attack">Attack</label>
+          <div>
+            <label for="attack">Attack</label>
+          </div>
           <input type="number" id="attack" name="attack" min="0" max="99999"/>
         </div>
 
