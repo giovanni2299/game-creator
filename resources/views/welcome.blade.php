@@ -14,7 +14,25 @@
     <body>
         @extends('layouts.app')
 
-        <h1 class="text-center">Weapons</h1>
+       
+            
+        <main>
+            <section>
+                <div class="container">
+                    <div class="row p-3">
+                        <div class="col-3">
+                            <a class="btn btn-dark" href="{{route('characters.index')}}">Charactes</a>
+                        </div>
+                        <div class="col-3">
+                            <a class="btn btn-success" href="{{route('weapons.index')}}">Weapons</a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        {{-- <h1 class="text-center">Weapons</h1>
             
         <div class="container">
             <div class="btn btn-primay">
@@ -42,7 +60,7 @@
                     </tr>
                     @endforeach
                 </tbody>
-            </table>
+            </table> --}}
         </div>
     </body>
 </html> 

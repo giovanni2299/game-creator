@@ -2,6 +2,7 @@
 
 use App\Models\Weapon;
 use App\Http\Controllers\CharacterController;
+use App\Http\Controllers\WeaponController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,9 +18,28 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-    $weapons = Weapon::all();
-    return view('welcome', compact('weapons'));
+   
+    return view('welcome');
 })->name('welcome');
+
+//WEAPONS
+
+//INDEX
+Route::get('/weapons', [WeaponController::class, 'index'])->name('weapons.index');
+//CREATE
+Route::get('/weapons/create', [WeaponController::class, 'create'])->name('weapons.create');
+//SHOW
+Route::get('/weapons/{weapon}', [WeaponController::class, 'show'])->name('weapons.show');
+//STORE
+Route::get('/weapons',[WeaponController::class, 'store'])->name('weapons.store');
+
+
+
+
+
+
+
+//CHARACTERS//
 
 // INDEX
 Route::get('/characters', [CharacterController::class, 'index'])->name('characters.index');

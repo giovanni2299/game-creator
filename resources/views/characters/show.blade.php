@@ -41,7 +41,7 @@
                               <button class="btn btn-danger" href="">elimina personaggio</button>
               
                             </form>
-                          </div>
+                        </div>
                         
 
                     

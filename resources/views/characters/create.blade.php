@@ -30,17 +30,26 @@
         </div>
 
         <div class="mb-3">
-          <label for="defence">Defence</label>
+          <div>
+            <label for="defence">Defence</label>
+
+          </div>
           <input type="number" id="defence" name="defence" min="0" max="99999"/>
         </div>
 
         <div class="mb-3">
-          <label for="speed">Speed</label>
+          <div>
+            <label for="speed">Speed</label>
+
+          </div>
           <input type="number" id="speed" name="speed" min="0" max="99999"/>
         </div>
 
         <div class="mb-3">
-          <label for="life">Life</label>
+          <div>
+            <label for="life">Life</label>
+
+          </div>
           <input type="number" id="life" name="life" min="0" max="999"/>
         </div>
 
