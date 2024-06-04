@@ -24,7 +24,7 @@
                             <a class="btn btn-dark" href="{{route('characters.index')}}">Charactes</a>
                         </div>
                         <div class="col-3">
-                            <a class="btn btn-success" href="{{route('weapons.index')}}">Weapons</a>
+                            {{-- <a class="btn btn-success" href="{{route('weapons.index')}}">Weapons</a> --}}
                         </div>
                         
                     </div>
