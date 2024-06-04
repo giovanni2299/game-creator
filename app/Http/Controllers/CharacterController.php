@@ -39,7 +39,7 @@ class CharacterController extends Controller
         //     'life'=>'required | min:1',
         // ]);
 
-        $form_data = $request->validated();
+        $form_data = $request->all();
 
         $new_character = Character::create($form_data);
 
@@ -68,7 +68,7 @@ class CharacterController extends Controller
     public function update(UpdateCharacterRequest $request, Character $character)
     {
         //
-        $form_data = $request->validated();
+        $form_data = $request->all();
 
         $character->update($form_data);
 

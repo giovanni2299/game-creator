@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Weapon;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreWeaponRequest;
+use App\Http\Requests\UpdateWeaponRequest;
 
 class WeaponController extends Controller
 {
@@ -30,7 +32,7 @@ class WeaponController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreWeaponRequest $request)
     {
         //
         
@@ -62,14 +64,12 @@ class WeaponController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Weapon $weapon)
+    public function update(UpdateWeaponRequest $request, Weapon $weapon)
     {
         //
         $form_data = $request->all();
        
-        $weapon->fill($form_data); 
-        
-        $weapon->save();
+        $weapon->update($form_data);
         
         return to_route('weapons.show', $weapon);
     }

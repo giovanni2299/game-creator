@@ -3,6 +3,7 @@
 @section('content')
     <main>
         <div class="container">
+            <h1 class='p-2'>{{ $weapon->name }}</h1>
             <div class="row">
                 <div>
                     <ul class="list-unstyled d-flex">
