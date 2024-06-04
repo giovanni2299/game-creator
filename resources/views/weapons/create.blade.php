@@ -8,7 +8,10 @@
             </div>
             <div class="container">
                 @csrf
-                <form action="{{route('weapons.store')}}">
+                <form action="{{route('weapons.store')}}" method="POST">
+
+                  @csrf
+
                     <div class="mb-3">
                         <label for="name" class="form-label">Name:</label>
                         <input type="text" name="name" class="form-control" id="name" placeholder="Insert the Name..">
@@ -16,9 +19,9 @@
               
                       <div class="mb-3">
                         <div>
-                          <label for="categry">Category:</label>
+                          <label for="category">Category:</label>
                         </div>
-                        <input type="text" id="categry" name="categry" placeholder="Insert the categoria"/>
+                        <input type="text" id="category" name="category" placeholder="Insert the categoria"/>
                       </div>
               
                       <div class="mb-3">
@@ -39,16 +42,27 @@
               
                       <div class="mb-3">
                         <div>
-                          <label for="life">Damage:</label>
+                          <label for="damage_dice">Damage Dice:</label>
               
                         </div>
-                        <input type="tetx" id="life" name="life" placeholder="Insert the  Damage"/>
+                        <input type="tetx" id="damage_dice" name="damage_dice" placeholder="Insert the  Damage"/>
                       </div>
               
-                      <button class="btn btn-primary">Add Character</button>
-              
-                </form>
+                      <button class="btn btn-primary">Add Weapon</button>
+                      
 
+
+
+                </form>
+                @if ($errors->any())
+        <p class="">
+          <ul>
+            @foreach ($errors->all() as $error )
+            <li class="alert alert-danger">{{ $error }}</li>
+            @endforeach
+          </ul>
+        </p>
+      @endif
                
                 
 

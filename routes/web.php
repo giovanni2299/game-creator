@@ -29,20 +29,23 @@ Route::get('/', function () {
 
 
 
-//CHARACTERS//
+
 Route::middleware('auth')->group(function () {
     //WEAPONS
 
-    //INDEX
-    Route::get('/weapons', [WeaponController::class, 'index'])->name('weapons.index');
-    //CREATE
-    Route::get('/weapons/create', [WeaponController::class, 'create'])->name('weapons.create');
-    //SHOW
-    Route::get('/weapons/{weapon}', [WeaponController::class, 'show'])->name('weapons.show');
-    //STORE
-    Route::get('/weapons',[WeaponController::class, 'store'])->name('weapons.store');
+    Route::resource('weapons', WeaponController::class);
+
+    // //INDEX
+    // Route::get('/weapons', [WeaponController::class, 'index'])->name('weapons.index');
+    // //CREATE
+    // Route::get('/weapons/create', [WeaponController::class, 'create'])->name('weapons.create');
+    // //SHOW
+    // Route::get('/weapons/{weapon}', [WeaponController::class, 'show'])->name('weapons.show');
+    // //STORE
+    // Route::post('/weapons',[WeaponController::class, 'store'])->name('weapons.store');
 
 
+    //CHARACTERS//
     // INDEX
     Route::get('/characters', [CharacterController::class, 'index'])->name('characters.index');
     // CREATE

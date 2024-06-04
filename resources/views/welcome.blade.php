@@ -19,6 +19,14 @@
             You can also use bootstrap icons out of the box.
         </p>
         <a href="https://packagist.org/packages/pacificdev/laravel_9_preset" class="btn btn-primary btn-lg" type="button">Documentation</a>
+
+        <p class="mt-2">
+            <a class="btn btn-primary" href="{{route('characters.index')}}">Vai a Characters </a>
+        </p>
+
+        <p class="mt-2">
+            <a class="btn btn-primary" href="{{route('weapons.index')}}">Vai a Weapons </a>
+        </p>
     </div>
 </div>
 

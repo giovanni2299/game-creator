@@ -32,6 +32,18 @@
 
                             </p>
                         </li>
+                        <li>
+                            <a class="btn btn-primary" href="{{route('weapons.edit',$weapon)}}">Edit Weapons</a>
+                            
+                            <form action="{{ route('weapons.destroy',$weapon) }}" method="POST">
+                                @method('DELETE')
+                                @csrf
+                
+                                <button class="btn btn-danger"> Delete Weapon </button>
+                
+                              </form>
+                            
+                        </li>
                         
 
                     </ul>

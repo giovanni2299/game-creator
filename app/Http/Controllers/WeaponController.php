@@ -33,13 +33,13 @@ class WeaponController extends Controller
     public function store(Request $request)
     {
         //
-       
-
+        
         $data_weapon = $request->all();
-
+        // dd($data_weapon);
+        
         $new_weapon = Weapon::create($data_weapon);
 
-        return to_route('weapon.show', $new_weapon);
+        return to_route('weapons.show', $new_weapon);
     }
 
     /**
@@ -56,6 +56,7 @@ class WeaponController extends Controller
     public function edit(Weapon $weapon)
     {
         //
+        return view('weapons.edit', compact('weapon'));
     }
 
     /**
@@ -64,6 +65,13 @@ class WeaponController extends Controller
     public function update(Request $request, Weapon $weapon)
     {
         //
+        $form_data = $request->all();
+       
+        $weapon->fill($form_data); 
+        
+        $weapon->save();
+        
+        return to_route('weapons.show', $weapon);
     }
 
     /**
@@ -72,5 +80,8 @@ class WeaponController extends Controller
     public function destroy(Weapon $weapon)
     {
         //
+        $weapon->delete();
+
+        return to_route('weapons.index');
     }
 }

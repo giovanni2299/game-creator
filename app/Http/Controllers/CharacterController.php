@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Character;
 use Illuminate\Http\Request;
-
+use App\Http\Requests\StoreCharacterRequest;
+use App\Http\Requests\UpdateCharacterRequest;
 class CharacterController extends Controller
 {
     /**
@@ -28,7 +29,7 @@ class CharacterController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreCharacterRequest $request)
     {
         // $request->validate([
         //     'name'=>'required | max:200',
@@ -38,7 +39,7 @@ class CharacterController extends Controller
         //     'life'=>'required | min:1',
         // ]);
 
-        $form_data = $request->all();
+        $form_data = $request->validated();
 
         $new_character = Character::create($form_data);
 
@@ -64,14 +65,12 @@ class CharacterController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Character $character)
+    public function update(UpdateCharacterRequest $request, Character $character)
     {
         //
-        $form_data = $request->all();
+        $form_data = $request->validated();
 
-        $character->fill($form_data);
-
-        $character->save();
+        $character->update($form_data);
 
         return to_route('characters.index', $character);
     }
