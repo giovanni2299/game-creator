@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Character;
+use App\Models\Weapon;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreCharacterRequest;
 use App\Http\Requests\UpdateCharacterRequest;
@@ -23,7 +24,10 @@ class CharacterController extends Controller
      */
     public function create()
     {
-        return view('characters.create');
+
+        $weapons = Weapon::all();
+
+        return view('characters.create', compact('weapons'));
     }
 
     /**
@@ -39,9 +43,13 @@ class CharacterController extends Controller
         //     'life'=>'required | min:1',
         // ]);
 
-        $form_data = $request->all();
+        $form_data = $request->validated();
 
         $new_character = Character::create($form_data);
+
+        if($request->has('weapons')){
+            $new_character->weapons()->attach($request->weapons);
+        }
 
         return to_route('characters.show', $new_character);
     }
@@ -59,7 +67,10 @@ class CharacterController extends Controller
      */
     public function edit(Character $character)
     {
-        return view('characters.edit', compact('character'));
+
+        $weapons = Weapon::orderBy('name', 'asc')->get();
+
+        return view('characters.edit', compact('character', 'weapons'));
     }
 
     /**
