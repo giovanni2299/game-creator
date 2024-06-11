@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             CharacterSeeder::class,
             WeaponSeeder::class,
+            CharacterWeaponSeeder::class,
         ]);
     }
 }

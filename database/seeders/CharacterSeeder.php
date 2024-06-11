@@ -16,7 +16,7 @@ class CharacterSeeder extends Seeder
      */
     public function run(Faker $faker): void
     {
-        DB::table('characters')->truncate();
+        // DB::table('characters')->truncate();
 
         for ($i = 0; $i <10; $i++) {
             $new_character = New Character();

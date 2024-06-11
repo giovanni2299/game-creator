@@ -19,7 +19,7 @@ class CharacterWeaponSeeder extends Seeder
         $characters = Character::all()->pluck('id');
 
         foreach($weapons as $weapon){
-            $rand_characters_ids = $faker->randomElements($characters, null);
+            $rand_characters_ids = $faker->randomElements($characters);
 
             foreach ($rand_characters_ids as $character_id){
 

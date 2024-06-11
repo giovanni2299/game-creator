@@ -28,7 +28,15 @@
                         Life-Points:
                         {{$character->life}}
                     </p>
+                    <p>
+                        <strong>Weapons:</strong>
+                        <br>
+                        @foreach ($character->weapons as $weapon )
+                            {{ $weapon->name }}
+                            <br>
+                        @endforeach
 
+                    </p>
                    
                         
                         <div class="d-flex gap-2">
