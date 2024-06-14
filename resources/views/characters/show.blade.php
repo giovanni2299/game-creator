@@ -12,7 +12,7 @@
                     <p>
                         
                         Type:
-                        @dd($character)
+                        
                     </p>
                     <p>Description: 
                         {{$character->description}}
