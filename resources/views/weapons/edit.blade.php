@@ -23,7 +23,7 @@
                         <div>
                           <label for="category">Category:</label>
                         </div>
-                        <input type="text" id="category" name="category" placeholder="Insert the categoria"/>
+                        <input type="text" id="category" name="category" placeholder="Insert the category"/>
                       </div>
               
                       <div class="mb-3">
@@ -39,7 +39,7 @@
                           <label for="cost">Cost:</label>
               
                         </div>
-                        <input type="text" id="cost" name="cost" placeholder="Insert the Costo" />
+                        <input type="text" id="cost" name="cost" placeholder="Insert the Cost" />
                       </div>
               
                       <div class="mb-3">
@@ -47,7 +47,7 @@
                           <label for="damage_dice">Damage Dice:</label>
               
                         </div>
-                        <input type="text" id="damage_dice" name="damage_dice" placeholder="Insert the  Damage"/>
+                        <input type="text" id="damage_dice" name="damage_dice" placeholder="Insert the Damage"/>
                       </div>
               
                       <button class="btn btn-primary">Edit Weapon</button>

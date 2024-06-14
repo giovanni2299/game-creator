@@ -6,14 +6,14 @@
         <div class="col-3">
             <div class="card">
                 <div class="card-header">
-                    <h2>Nome: {{$character->name}}</h2>
+                    <h2>Name: {{$character->name}}</h2>
                 </div>
                 <div class="card-body">
-                    <p>Descrizione: 
+                    <p>Description: 
                         {{$character->description}}
                     </p>
                     <p>
-                        Attacco:
+                        Attack:
                         {{$character->attack}}
                     </p>
                     <p>
@@ -40,13 +40,13 @@
                    
                         
                         <div class="d-flex gap-2">
-                            <a class="btn me-2 btn-primary" href="{{ route('characters.edit', $character) }}">edita personaggio  </a>
+                            <a class="btn me-2 btn-primary" href="{{ route('characters.edit', $character) }}">Edit Character</a>
 
                             <form action="{{ route('characters.destroy',$character) }}" method="POST">
                               @method('DELETE')
                               @csrf
               
-                              <button class="btn btn-danger" href="">elimina personaggio</button>
+                              <button class="btn btn-danger" href="">Delete Character</button>
               
                             </form>
                         </div>
