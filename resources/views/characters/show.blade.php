@@ -11,7 +11,12 @@
     <section class="page-main">
 <div class="container">
     <div class="row justify-content-center p-3">
-        <div class="col-3">
+        <div class="col-5">
+            <div class="card">
+                <img src="/img/charact.png" alt="">
+            </div>
+        </div>
+        <div class="col-7">
             <div class="card text-bg-secondary">
                 <div class="card-header my-card-header">
                     <h2>Name: {{$character->name}}</h2>
