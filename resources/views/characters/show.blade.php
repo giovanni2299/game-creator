@@ -9,6 +9,11 @@
                     <h2>Name: {{$character->name}}</h2>
                 </div>
                 <div class="card-body">
+                    <p>
+                        
+                        Type:
+                        @dd($character)
+                    </p>
                     <p>Description: 
                         {{$character->description}}
                     </p>

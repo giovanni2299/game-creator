@@ -15,7 +15,7 @@ class TypeSeeder extends Seeder
     
     public function run(): void
     {
-        DB::table('types')->truncate();
+        // DB::table('types')->truncate();
 
         $types = [
             ['thief','The rogue or thief is one of the standard playable character classes in most editions of the Dungeons & Dragons fantasy role-playing game.[1] A rogue is a versatile character, capable of sneaky combat and nimble tricks. The rogue is stealthy and dexterous, and in early editions was the only official base class from the Player’s Handbook capable of finding and disarming traps and picking locks. The rogue also has the ability to “sneak attack” (“backstab” in previous editions) enemies who are caught off-guard or taken by surprise, inflicting extra damage.'],

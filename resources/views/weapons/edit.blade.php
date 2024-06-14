@@ -16,7 +16,7 @@
 
                     <div class="mb-3">
                         <label for="name" class="form-label">Name:</label>
-                        <input type="text" name="name" class="form-control" id="name" placeholder="Insert the Name..">
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Insert the Name.." >
                       </div>
               
                       <div class="mb-3">

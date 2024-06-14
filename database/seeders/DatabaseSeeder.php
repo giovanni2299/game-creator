@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $this->call([
+            TypeSeeder::class,
             CharacterSeeder::class,
             WeaponSeeder::class,
             CharacterWeaponSeeder::class,

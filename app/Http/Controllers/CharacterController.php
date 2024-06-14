@@ -7,6 +7,8 @@ use App\Models\Weapon;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreCharacterRequest;
 use App\Http\Requests\UpdateCharacterRequest;
+use App\Models\Type;
+
 class CharacterController extends Controller
 {
     /**
@@ -59,6 +61,7 @@ class CharacterController extends Controller
      */
     public function show(Character $character)
     {
+        $character->load(['type', 'type.characters']);
         return view('characters.show', compact('character'));
     }
 
@@ -82,6 +85,15 @@ class CharacterController extends Controller
         $form_data = $request->all();
 
         $character->update($form_data);
+
+
+        if ($request->has('weapons')) {
+            $character->weapons()->sync($request->weapons);
+        } else {
+            // l'utente non ha selezionato niente eliminiamo i collegamenti con i tags
+            $character->weapons()->detach();
+            // $post->tags()->sync([]); // fa la stessa cosa
+        }
 
         return to_route('characters.index', $character);
     }
