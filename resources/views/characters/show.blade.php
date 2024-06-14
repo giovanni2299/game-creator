@@ -1,11 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
+<section class="page-main">
+    <section   section class="hero ">
+        <img src="/img/dragon.jpeg" alt="">
+        <div class="container">
+
+        </div>
+    </section>
+    <section class="page-main">
 <div class="container">
     <div class="row justify-content-center p-3">
         <div class="col-3">
-            <div class="card">
-                <div class="card-header">
+            <div class="card text-bg-secondary">
+                <div class="card-header my-card-header">
                     <h2>Name: {{$character->name}}</h2>
                 </div>
                 <div class="card-body">
@@ -66,4 +74,6 @@
         </div>
     </div>
 </div>
+</section>
+</section>
 @endsection
