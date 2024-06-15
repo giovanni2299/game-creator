@@ -9,7 +9,7 @@ class Weapon extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'name', 'category', 'damage_dice', 'weight', 'cost'
+        'name','slug','url_img','category', 'damage_dice', 'weight', 'cost'
     ];
 
     public function characters()

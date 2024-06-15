@@ -4,10 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Character;
 use App\Models\Weapon;
+use App\Models\Type;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreCharacterRequest;
 use App\Http\Requests\UpdateCharacterRequest;
-use App\Models\Type;
+use Illuminate\Support\Str;
 
 class CharacterController extends Controller
 {
@@ -37,15 +38,23 @@ class CharacterController extends Controller
      */
     public function store(StoreCharacterRequest $request)
     {
-        // $request->validate([
-        //     'name'=>'required | max:200',
-        //     'attack'=>'required | min:1',
-        //     'defence'=>'required | min:1',
-        //     'speed'=>'required | min:1',
-        //     'life'=>'required | min:1',
-        // ]);
 
         $form_data = $request->validated();
+
+        $base_slug = Str::slug($form_data['name']);
+        $slug = $base_slug;
+        $n = 0;
+
+        do {
+            $find = Character::where('slug', $slug)->first();
+
+            if ($find !== null) {
+                $n++;
+                $slug = $base_slug . '-' . $n;
+            }
+        } while ($find !== null);
+
+        $form_data['slug'] = $slug;
 
         $new_character = Character::create($form_data);
 
@@ -84,13 +93,9 @@ class CharacterController extends Controller
         //
         $form_data = $request->all();
 
-        $character->update($form_data);
-
-
         if ($request->has('weapons')) {
             $character->weapons()->sync($request->weapons);
         } else {
-            // l'utente non ha selezionato niente eliminiamo i collegamenti con i tags
             $character->weapons()->detach();
             // $post->tags()->sync([]); // fa la stessa cosa
         }

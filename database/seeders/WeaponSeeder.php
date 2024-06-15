@@ -6,6 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Weapon;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 use Illuminate\Validation\Rules\Exists;
 
 class WeaponSeeder extends Seeder
@@ -22,7 +23,9 @@ class WeaponSeeder extends Seeder
         foreach($data as $index => $row){
             if($index > 0){
                 $new_weapon = new Weapon();
-                $new_weapon->name = $row[0];
+                $name = $row[0];
+                $new_weapon->name = $name;
+                $new_weapon->slug = Str::slug($name);
                 $new_weapon->category = $row[3];
                 $new_weapon->weight = $row[4];
                 $new_weapon->cost = $row[5];

@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('weapons', function (Blueprint $table) {
             $table->id();
             $table->string('name',50);
+            $table->string('slug')->unique();
+            $table->string('url_img')->nullable();
             $table->string('category',50);
             $table->string('weight',10);
             $table->string('cost',12);

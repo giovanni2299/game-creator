@@ -9,7 +9,7 @@ class Character extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'name', 'description', 'attack', 'defence', 'speed', 'life',
+        'name','slug','url_img','description', 'attack', 'defence', 'speed', 'life','type_id',
     ];
 
     public function weapons()

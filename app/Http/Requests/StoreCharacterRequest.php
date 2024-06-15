@@ -23,6 +23,7 @@ class StoreCharacterRequest extends FormRequest
     {
         return [
             'name' => 'required|max:200|string',
+            'url_img' => 'nullable|max:500|url',
             'description' => 'nullable|string',
             'attack' => 'required|integer',
             'defence' => 'required|integer',

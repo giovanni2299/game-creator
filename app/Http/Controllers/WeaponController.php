@@ -6,6 +6,7 @@ use App\Models\Weapon;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreWeaponRequest;
 use App\Http\Requests\UpdateWeaponRequest;
+use Illuminate\Support\Str;
 
 class WeaponController extends Controller
 {
@@ -37,7 +38,22 @@ class WeaponController extends Controller
         //
         
         $data_weapon = $request->all();
-        // dd($data_weapon);
+
+        $base_slug = Str::slug($form_data['title']);
+        $slug = $base_slug;
+        $n = 0;
+
+        do {
+            $find = Weapon::where('slug', $slug)->first();
+
+            if ($find !== null) {
+                $n++;
+                $slug = $base_slug . '-' . $n;
+            }
+        } while ($find !== null);
+
+        $form_data['slug'] = $slug;
+
         
         $new_weapon = Weapon::create($data_weapon);
 

@@ -4,9 +4,6 @@
 <section class="page-main">
     <section   section class="hero ">
         <img src="/img/dragon.jpeg" alt="">
-        <div class="container">
-
-        </div>
     </section>
     <section class="page-main">
 <div class="container">
@@ -23,9 +20,8 @@
                 </div>
                 <div class="card-body">
                     <p>
-                        
                         Type:
-                        
+                        {{$character->type->name}}
                     </p>
                     <p>Description: 
                         {{$character->description}}
@@ -55,25 +51,17 @@
                         @endforeach
 
                     </p>
-                   
-                        
-                        <div class="d-flex gap-2">
-                            <a class="btn me-2 btn-primary" href="{{ route('characters.edit', $character) }}">Edit Character</a>
+                    <div class="d-flex gap-2">
+                        <a class="btn me-2 btn-primary" href="{{ route('characters.edit', $character) }}">Edit Character</a>
 
-                            <form action="{{ route('characters.destroy',$character) }}" method="POST">
-                              @method('DELETE')
-                              @csrf
-              
-                              <button class="btn btn-danger" href="">Delete Character</button>
-              
-                            </form>
-                        </div>
-                        
-
-                    
-
-
-
+                        <form action="{{ route('characters.destroy',$character) }}" method="POST">
+                            @method('DELETE')
+                            @csrf
+            
+                            <button class="btn btn-danger" href="">Delete Character</button>
+            
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

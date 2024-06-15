@@ -23,6 +23,7 @@ class UpdateWeaponRequest extends FormRequest
     {
         return [
             'name' => 'required|max:50|string',
+            'url_img' => 'nullable|max:500|url',
             'category' => 'required|max:50|string',
             'weight' => 'required|max:10|string',
             'cost' => 'required|max:12|string',
