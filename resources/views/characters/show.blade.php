@@ -52,7 +52,7 @@
 
                     </p>
                     <div class="d-flex gap-2">
-                        <a class="btn me-2 btn-primary" href="{{ route('characters.edit', $character) }}">Edit Character</a>
+                        {{-- <a class="btn me-2 btn-primary" href="{{ route('characters.edit', $character) }}">Edit Character</a>
 
                         <form action="{{ route('characters.destroy',$character) }}" method="POST">
                             @method('DELETE')
@@ -60,7 +60,19 @@
             
                             <button class="btn btn-danger" href="">Delete Character</button>
             
-                        </form>
+                        </form> --}}
+                        
+                    <form class="delete-form" action="{{ route('characters.destroy',$character) }}" method="POST">
+                    
+                      @csrf
+                      @method('DELETE')
+
+                      <button class="btn btn-danger">Delete</button>
+                    
+                    </form>
+              
+                  
+                {{-- @endif --}}
                     </div>
                 </div>
             </div>
