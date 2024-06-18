@@ -2,13 +2,13 @@
 
 @section('content')
 
-<section>
-    <section class="hero ">
+
+    <!-- <section class="hero">
         <img src="/img/dragon.jpeg" alt="">
         <div class="container">
 
         </div>
-    </section>
+    </section> -->
     <section class="page-main">
 
         <div class="container p-3" >
@@ -45,6 +45,5 @@
             </div>
         </div>
     </section>
-</section>
 
 @endsection

@@ -2,7 +2,7 @@
 
 @section('content')
     <main>
-        <section class="create-weapons">
+        <section class="create-weapons text-white">
             <div class="container">
                 <h1>Edit Weapon
                     {{$weapon->name}}
@@ -50,7 +50,7 @@
                         <input type="text" id="damage_dice" name="damage_dice" placeholder="Insert the Damage"/>
                       </div>
               
-                      <button class="btn btn-primary">Edit Weapon</button>
+                      <button class="btn btn-light">Edit Weapon</button>
                       
 
 
