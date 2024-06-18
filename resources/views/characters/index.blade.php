@@ -34,6 +34,10 @@
                                 <a class="btn btn-outline-dark" href="{{route('characters.show', $character)}}">Show Details</a>
         
                         </div>
+                        {{-- <div>
+                            <a href="">Modifica Voluta</a>
+                        </div> --}}
+    
                     </div>
                     
                 </div>
