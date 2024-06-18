@@ -160,8 +160,14 @@
                 </div>
             </div>
         </nav>
-
+        
         <main class="">
+            <section class="hero">
+                <img src="/img/dragon.jpeg" alt="">
+                <!-- <div class="container">
+    
+                </div> -->
+            </section>
             @yield('content')
         </main>
     </div>

@@ -1,15 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="page-main">
+<!-- <section class="page-main">
     <section   section class="hero ">
         <img src="/img/dragon.jpeg" alt="">
-    </section>
+    </section> -->
     <section class="page-main">
 <div class="container">
     <div class="row justify-content-center p-3">
         <div class="col-5">
-            <div class="card">
+            <div class="card ">
                 <img src="/img/charact.png" alt="">
             </div>
         </div>

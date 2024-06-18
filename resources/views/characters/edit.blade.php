@@ -2,7 +2,7 @@
 
 @section('content')
 
-<section class="edit-character">
+<section class="edit-character page-main">
   <div class="container">
     <h2 class="fs-2">Modify Character</h2>
   </div>
