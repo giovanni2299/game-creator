@@ -19,6 +19,7 @@
                 </a>
     
             </div>
+
             <div class="row pt-3 ">
                 @foreach($characters as $character)
                 <div class="col-3 p-2">
@@ -33,7 +34,9 @@
                                 <a class="btn btn-outline-dark" href="{{route('characters.show', $character)}}">Show Details</a>
         
                         </div>
-                       
+                        <div>
+                            <a href="">Modifica Voluta</a>
+                        </div>
     
                     </div>
                     
