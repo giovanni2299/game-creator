@@ -25,10 +25,15 @@ class TypeSeeder extends Seeder
         ['Wizard','In the original version of the game, magic-user was one of the base character classes.[1] Magic-User was one of the three original classes, the other two being Fighting Man (renamed Fighter in later editions) and Cleric.
         The Magic-User was physically weak and vulnerable but compensated for this with the potential to develop powerful spellcasting abilities. In practice a mid- to high-level Magic-User was a combination intelligence gatherer and walking artillery, gathering information about possible dangers not yet seen and augmenting the physical combat abilities of the other classes with potentially devastating long-range and area attacks.']
     ];
-        foreach ($types as $type) {
+
+    $img_urls = ["/img/charact_unknown.jpg", "/img/charact_thief.jpg", "/img/charact_barbarian.png", "/img/charact_elf.png", "/img/charact_wizard.png"];
+        foreach ($types as $key => $type) {
             $new_type = new Type();
             $new_type->name = $type[0];
             $new_type->description = $type[1];
+            $new_type->url_img = $img_urls[$key];
+
+            
             $new_type->save();
         };
 
