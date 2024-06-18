@@ -10,7 +10,7 @@
     <div class="row justify-content-center p-3">
         <div class="col-5">
             <div class="card">
-                <img src="/img/charact.png" alt="">
+                <img src="{{ $character->type->url_img }}" alt="">
             </div>
         </div>
         <div class="col-7">
