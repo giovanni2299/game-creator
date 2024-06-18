@@ -52,9 +52,9 @@
 
                     </p>
                     <div class="d-flex gap-2">
-                        {{-- <a class="btn me-2 btn-primary" href="{{ route('characters.edit', $character) }}">Edit Character</a>
+                        <a class="btn me-2 btn-primary" href="{{ route('characters.edit', $character) }}">Edit Character</a>
 
-                        <form action="{{ route('characters.destroy',$character) }}" method="POST">
+                        {{-- <form action="{{ route('characters.destroy',$character) }}" method="POST">
                             @method('DELETE')
                             @csrf
             
