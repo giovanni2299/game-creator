@@ -19,6 +19,11 @@
                 </a>
     
             </div>
+
+            <p>
+                Paragrafo a caso
+            </p>
+
             <div class="row pt-3 ">
                 @foreach($characters as $character)
                 <div class="col-3 p-2">
