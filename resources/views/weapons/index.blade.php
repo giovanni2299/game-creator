@@ -3,8 +3,8 @@
 @section('content')
 <section class="page-main">
     <div class="container">
-        <p class="mt-2">
-            <a class="btn btn-success" href="{{route('weapons.create')}}">Create a New Weapon</a>
+        <p class="mt-2 position-relative ">
+            <a class="btn btn-outline-dark text-white" href="{{route('weapons.create')}}">Create a New Weapon</a>
         </p>
         <div class="row gx-2 gy-2">
             @foreach ($weapons as $weapon)

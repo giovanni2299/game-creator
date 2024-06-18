@@ -2,7 +2,7 @@
 
 @section('content')
     <main>
-        <section class="create-weapons">
+        <section class="create-weapons text-white">
             <div class="container">
                 <h1>Create a new Weapon</h1>
             </div>
@@ -48,7 +48,7 @@
                         <input type="tetx" id="damage_dice" name="damage_dice" placeholder="Insert the  Damage"/>
                       </div>
               
-                      <button class="btn btn-primary">Add Weapon</button>
+                      <button class="btn btn-light">Add Weapon</button>
                       
 
 
