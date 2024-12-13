@@ -2,7 +2,7 @@
 
 @section('content')
 
-<section class="create-character">
+<section class="create-character text-white">
   <div class="container">
     <h2 class="fs-2">Add new Character</h2>
   </div>
@@ -23,14 +23,14 @@
       </div>
 
       <div class="accordion" id="accordionExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <div class="accordion-item bg-dark text-white">
+          <h2 class="accordion-header " id="headingOne">
+            <button class="accordion-button bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
               Select Weapons
             </button>
           </h2>
-          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
+          <div id="collapseOne" class="accordion-collapse collapse show " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body d-flex flex-wrap">
               @foreach ($weapons as $weapon)
                 <div class="form-check">
                   <input @checked(in_array($weapon->id, old('weapons', []))) type="checkbox" name='weapons[]' id='weapon-{{ $weapon->id }}' value='{{ $weapon->id }}'>
@@ -76,7 +76,7 @@
           <input type="number" id="life" name="life" min="0" max="999" />
         </div>
 
-        <button class="btn btn-primary">Add Character</button>
+        <button class="btn btn-light">Add Character</button>
 
     </form>
 

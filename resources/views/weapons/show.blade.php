@@ -3,38 +3,38 @@
 @section('content')
     <main>
         <div class="container">
-            <h1 class='p-2'>{{ $weapon->name }}</h1>
+            <h1 class='p-5 text-white'>{{ $weapon->name }}</h1>
             <div class="row">
-                <div>
-                    <ul class="list-unstyled d-flex">
-                        <li class="p-3">
-                            <h1>Category:</h1>
-                            <p class="fs-2">
+                <div class="col-8">
+                    <div class="card  my-card text-bg-secondary">
+                        <div class="p-3">
+                            <h5>Category:</h5>
+                            <p class="">
                                 {{$weapon->category}}
                             </p>
-                        </li>
-                        <li class="p-3">
-                            <h1>Weight:</h1>
-                            <p class="fs-2">
+                        </div>
+                        <div class="p-3">
+                            <h5>Weight:</h5>
+                            <p class="">
                                 {{$weapon->weight}}
                             </p>
-                        </li>
-                        <li class="p-3">
-                            <h1>Cost:</h1>
-                            <p class="fs-2">
+                        </div>
+                        <div class="p-3">
+                            <h5>Cost:</h5>
+                            <p class="">
                                 {{$weapon->cost}}
 
                             </p>
-                        </li>
-                        <li class="p-3">
-                            <h1>Damage:</h1>
-                            <p class="fs-2">
+                        </div>
+                        <div class="p-3">
+                            <h5>Damage:</h5>
+                            <p class="">
                                 {{$weapon->damage_dice}}
 
                             </p>
-                        </li>
-                        <li>
-                            <a class="btn btn-primary" href="{{route('weapons.edit',$weapon)}}">Edit Weapons</a>
+                        </div>
+                        <div class="d-flex gap-2" >
+                            <a class="btn btn-dark" href="{{route('weapons.edit',$weapon)}}">Edit Weapons</a>
                             
                             <form class="delete-form" action="{{ route('weapons.destroy',$weapon) }}" method="POST">
                                 @method('DELETE')
@@ -44,10 +44,10 @@
                 
                               </form>
                             
-                        </li>
+                        </div>
                         
 
-                    </ul>
+                    </div>
                 </div>
             </div>
         </div>
